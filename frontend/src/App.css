@@ -1,0 +1,255 @@
+:root {
+  --cor-primaria: #5e60ce;
+  --cor-primaria-hover: #4a4cc7;
+  --cor-fundo: #f0f2f5;
+  --cor-fundo-card: #ffffff;
+  --cor-texto-principal: #363f5f;
+  --cor-texto-secundario: #969cb3;
+  --cor-receita: #33cc95;
+  --cor-despesa: #e52e4d;
+  --sombra-card: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto-principal);
+}
+
+.app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.cabecalho {
+  text-align: center;
+  color: var(--cor-texto-principal);
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+button,
+input,
+select {
+  border-radius: 8px;
+  border: 1px solid #d7d7d7;
+  padding: 0.8em 1.2em;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: inherit;
+  background-color: #e7e9ee;
+  color: var(--cor-texto-principal);
+  transition: all 0.2s ease-in-out;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: var(--cor-primaria);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button:hover {
+  background-color: var(--cor-primaria-hover);
+  transform: translateY(-2px);
+}
+
+input:focus,
+select:focus {
+  outline: 2px solid var(--cor-primaria);
+  border-color: var(--cor-primaria);
+}
+
+input::placeholder {
+  color: var(--cor-texto-secundario);
+}
+
+.resumo {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  background-color: var(--cor-fundo-card);
+  padding: 1.5rem 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  box-shadow: var(--sombra-card);
+  text-align: center;
+}
+
+.resumo-item {
+  color: var(--cor-texto-principal);
+}
+
+.resumo-item h3 {
+  margin: 0 0 0.5rem 0;
+  font-weight: 400;
+}
+
+.resumo-item p {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.resumo-item .receita { color: var(--cor-receita); }
+.resumo-item .despesa { color: var(--cor-despesa); }
+.resumo-item .saldo { color: var(--cor-texto-principal); }
+
+.item-transacao {
+  display: grid;
+  grid-template-columns: 2fr 1fr auto;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background-color: var(--cor-fundo-card);
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  box-shadow: var(--sombra-card);
+}
+
+.item-transacao span:first-child {
+  font-weight: 500;
+}
+
+.valor-receita,
+.valor-despesa {
+  font-weight: 500;
+}
+
+.valor-receita { color: var(--cor-receita); }
+.valor-despesa { color: var(--cor-despesa); }
+
+.botoes-acao {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.botoes-acao button {
+  padding: 0.4em 0.8em;
+  font-size: 0.9rem;
+}
+
+.formulario,
+.formulario-edit {
+  display: flex;
+  gap: 1rem;
+  padding: 2rem;
+  background-color: var(--cor-fundo-card);
+  border-radius: 8px;
+  box-shadow: var(--sombra-card);
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.formulario {
+  flex-direction: column;
+}
+
+.formulario-edit {
+  flex-direction: row;
+  align-items: center;
+  padding: 1rem;
+}
+
+.formulario-edit input,
+.formulario-edit select {
+  flex: 1;
+}
+
+.erro-formulario {
+  color: var(--cor-despesa);
+  text-align: center;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .app {
+    padding: 1rem;
+  }
+
+  .resumo {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+    gap: 0.5rem;
+  }
+
+  .resumo-item {
+    flex: 1;
+    padding: 0.75rem;
+    text-align: center;
+  }
+
+  .resumo-item h3 {
+    font-size: 0.8rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .resumo-item p {
+    font-size: 1.1rem;
+    word-break: break-word;
+  }
+
+  .item-transacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    grid-template-columns: unset;
+    text-align: center;
+  }
+
+  .formulario-edit {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1rem;
+    gap: 0.8rem;
+    overflow: hidden;
+  }
+
+  .formulario-edit input,
+  .formulario-edit select,
+  .formulario-edit button,
+  select {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  select {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 1rem;
+    padding: 0.8em 1.2em;
+  }
+
+  select option {
+    white-space: normal;
+    padding: 0.5em 0.8em;
+    overflow-wrap: break-word;
+  }
+
+  .botoes-acao {
+    width: 100%;
+    justify-content: center;
+    margin-top: 0.5rem;
+  }
+}

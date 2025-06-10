@@ -1,0 +1,34 @@
+{
+  "transacoes": [
+    {
+      "id": "1",
+      "descricao": "Salário",
+      "valor": 2100,
+      "tipo": "receita"
+    },
+    {
+      "id": "2",
+      "descricao": "Viagem",
+      "valor": 434,
+      "tipo": "despesa"
+    },
+    {
+      "id": "f33e",
+      "descricao": "Academia",
+      "valor": 139.9,
+      "tipo": "despesa"
+    },
+    {
+      "id": "a67c",
+      "descricao": "Mercado",
+      "valor": 200,
+      "tipo": "despesa"
+    },
+    {
+      "id": "d026",
+      "descricao": "Investimento",
+      "valor": 476.64,
+      "tipo": "despesa"
+    }
+  ]
+}
