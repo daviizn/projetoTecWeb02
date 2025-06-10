@@ -39,12 +39,12 @@ cd projetoTecWeb02
 
 ### 2. Iniciar o Backend
 
-cd backend
-npm install
-npm start
+* cd backend
+* npm install
+* npm start
 
 ### 3. Iniciar o Frontend
 
-cd ../frontend
-npm install 
-npm run dev 
+* cd ../frontend
+* npm install 
+* npm run dev 
