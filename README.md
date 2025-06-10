@@ -34,8 +34,8 @@ Certifique-se de ter o Node.js e o npm (ou yarn) instalados em seu sistema.
 
 ### 1. Clonar o Repositório
 
-git clone https://github.com/daviizn/projetoTecWeb02.git
-cd projetoTecWeb02
+* git clone https://github.com/daviizn/projetoTecWeb02.git
+* cd projetoTecWeb02
 
 ### 2. Iniciar o Backend
 
