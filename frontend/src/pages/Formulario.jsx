@@ -1,20 +1,19 @@
 import { useState } from 'react';
 import { useTransacoes } from '../contexts/TransacaoContext';
-import { useNavegacao } from '../contexts/NavegacaoContext'; // Importar para navegar
+import { useNavegacao } from '../contexts/NavegacaoContext';
 
 export default function Formulario() {
   const { adicionarTransacao } = useTransacoes();
-  const { setPagina } = useNavegacao(); // Obter a função para mudar de página
+  const { setPagina } = useNavegacao();
   const [form, setForm] = useState({ descricao: '', valor: '', tipo: 'receita' });
   const [erro, setErro] = useState('');
 
   const enviar = async () => {
-    // Validação de campos vazios
     if (!form.descricao || !form.valor) {
       setErro('Preencha todos os campos!');
       return;
     }
-    // Validação de valor negativo ou zero
+  
     if (+form.valor <= 0) {
       setErro('O valor da transação deve ser positivo.');
       return;
@@ -26,7 +25,7 @@ export default function Formulario() {
       alert('Transação adicionada com sucesso!');
       setForm({ descricao: '', valor: '', tipo: 'receita' });
       setErro('');
-      setPagina('listar'); // Volta para a listagem após o sucesso
+      setPagina('listar');
     } else {
       setErro('Ocorreu um erro ao adicionar a transação. Tente novamente.');
     }

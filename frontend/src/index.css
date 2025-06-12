@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: #213547;
-  background-color: #f0f2f5; /* Usando a cor de fundo do nosso tema */
+  background-color: #f0f2f5;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -24,14 +24,12 @@ a:hover {
 
 body {
   margin: 0;
-  /* REMOVIDO: display: flex; */
-  /* REMOVIDO: place-items: center; */
   min-width: 320px;
   min-height: 100vh;
 }
 
 h1 {
-  font-size: 2.5em; /* Ajuste para melhor visual */
+  font-size: 2.5em;
   line-height: 1.1;
   margin: 0;
 }
@@ -46,7 +44,3 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
-
-/* O resto dos estilos de botão e tema claro/escuro podem ser mantidos ou removidos
-   se você for controlar tudo pelo App.css, como fizemos.
-   Para simplificar, recomendo manter este arquivo o mais limpo possível. */

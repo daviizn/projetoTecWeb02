@@ -13,34 +13,34 @@ export const TransacaoProvider = ({ children }) => {
 
   const adicionarTransacao = async (transacao) => {
     try {
-      await adicionar(transacao); //
+      await adicionar(transacao);
       carregar();
-      return true; // Sucesso
+      return true;
     } catch (error) {
       console.error("Erro ao adicionar transação:", error);
-      return false; // Falha
+      return false;
     }
   };
 
   const removerTransacao = async (id) => {
     try {
-      await remover(id); //
+      await remover(id);
       carregar();
-      return true; // Sucesso
+      return true;
     } catch (error) {
       console.error("Erro ao remover transação:", error);
-      return false; // Falha
+      return false;
     }
   };
 
   const editarTransacao = async (id, novaTransacao) => {
     try {
-      await atualizar(id, novaTransacao); //
+      await atualizar(id, novaTransacao);
       carregar();
-      return true; // Sucesso
+      return true;
     } catch (error) {
       console.error("Erro ao editar transação:", error);
-      return false; // Falha
+      return false;
     }
   };
 

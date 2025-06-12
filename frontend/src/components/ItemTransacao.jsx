@@ -8,7 +8,6 @@ export default function ItemTransacao({ transacao }) {
   const [erroEdicao, setErroEdicao] = useState('');
 
   const salvar = async () => {
-    // Validações
     if (!form.descricao || !form.valor) {
       setErroEdicao('Descrição e valor não podem ser vazios.');
       return;
